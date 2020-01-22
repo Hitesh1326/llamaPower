@@ -1,0 +1,23 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <button (click)="snav.toggle()" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="app-name">Llama Powered App</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #snav class="sidenav" fixedTopGap="56">
+      <mat-nav-list (click)="snav.toggle()">
+        <a [routerLink]="['']" mat-list-item>Home</a>
+        <a [routerLink]="['/store']" mat-list-item>Store</a>
+        <a [routerLink]="['/tech']" mat-list-item>Tech</a>
+        <a [routerLink]="['/about']" mat-list-item>About Me</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

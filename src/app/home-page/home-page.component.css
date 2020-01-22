@@ -1,0 +1,25 @@
+.page-card {
+  height: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.card-image {
+  background-image: url('https://i.ibb.co/6Rm0ymQ/dusan-smetana-Hc9-G7ow-Ds1s-unsplash.jpg');
+  background-size: cover;
+}
+
+.text {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  font-size: large;
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .page-card {
+    height: 90%;
+  }
+}

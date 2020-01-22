@@ -1,0 +1,35 @@
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="space-evenly center"
+     fxLayoutGap="0"
+     fxLayoutGap.xs="0">
+  <mat-card (@cardAnimator.done)="resetAnimationState(product)" *ngFor="let product of products"
+            [@cardAnimator]="product.state"
+            class="card" fxFlex="20%">
+    <mat-card-header>
+      <mat-card-title>
+        <span class="mat-headline">{{product.title}}</span>
+      </mat-card-title>
+    </mat-card-header>
+    <img alt="bottle" mat-card-image src='{{product.img}}'>
+    <mat-card-content>
+      <p>{{product.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (tap)="startAnimation(product,'swing')" class="mat-button" color="warn" mat-icon-button>
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <button (click)="likeButton(product)" (tap)="startAnimation(product,'wobble')" *ngIf="!product.liked"
+              class="icons"
+              mat-icon-button>
+        <mat-icon>favorite_border</mat-icon>
+      </button>
+      <button (click)="disLikeButton(product)" (tap)="startAnimation(product,'jello')" *ngIf="product.liked"
+              color="warn"
+              mat-icon-button>
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

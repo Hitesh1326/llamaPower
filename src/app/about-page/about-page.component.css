@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 60%;
+}
+
+.text {
+  font-weight: normal;
+  font-size: medium;
+  line-height: normal;
+}
+
+.title {
+  text-align: center;
+}

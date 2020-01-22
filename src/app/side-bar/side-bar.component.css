@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.app-name {
+  margin-left: 10px;
+}
+
+.sidenav-container {
+  flex: 1;
+}
+
+.sidenav {
+  min-width: 10%;
+}
+
+@media screen and (max-width: 500px) {
+  .sidenav-container {
+    flex: 1 0 auto;
+  }
+
+}

@@ -1,0 +1,20 @@
+.container {
+  margin: 20px;
+}
+
+.card {
+  min-width: 250px;
+  margin: auto;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+
+  .card {
+    margin-bottom: 10px !important;
+  }
+}
